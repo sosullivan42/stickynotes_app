@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+<h2>{{ page_title }}
+<!-- <link rel="stylesheet" href="{% static 'stickynotes/styles.css' %}"> -->
+</h2>
+    <ul>
+        {% for stickynote in stickynotes %}
+        <li>
+            <div>
+
+            <a href="{% url 'stickynote' pk=stickynote.pk %}">{{stickynote.title }}</a>
+            <!-- <p>{{ stickynote.created_by }}</p> -->
+            <a href="{% url 'update_stickynote' pk=stickynote.pk %}">edit</a>
+            <a href="{% url 'delete_stickynote' pk=stickynote.pk %}">delete</a>
+            </div>
+
+        </li>
+        {% endfor %}
+    </ul>
+<nav><a href="{% url 'create_stickynote' %}"> Create StickyNote </a></nav>  
+</section>
+{% endblock %}

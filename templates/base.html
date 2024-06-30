@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stickynotes/styles.css' %}">
+    <title>{% block title %}Sticky Notes App{% endblock %}</title>
+</header>
+<body>
+    
+
+     <main>
+        {% block content %}{% endblock %}
+     </main>
+     <!-- Nav bar -->
+     <br>
+     <nav>
+                <a href="/admin">
+                    Admin Access
+                </a>
+     </nav>
+     <br>
+    <!-- Footer -->
+     <Footer>
+        <div>
+            copyright © 2024
+        </div>
+
+        <div>
+            created by sorchaosullivan
+        </div>
+     </Footer>
+
+</body>
+</html>

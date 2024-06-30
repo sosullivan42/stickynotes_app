@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+<h2>{{ stickynote.title }}</h2>
+
+    <p> 
+        {{ stickynote.description }}
+    </p>
+
+    <p>
+        {{ stickynote.mark_as_complete }}
+    </p>
+    <a href="{% url 'delete_stickynote' pk=stickynote.pk %}">delete</a>
+    <br>
+    <a href="{% url 'stickynotes' %}">back</a>
+</section>
+
+{% endblock %}
