@@ -1,3 +1,6 @@
+<!-- templates/base.html -->
+
+<!-- Defines the common structure. -->
 {% load static %}
 
 <!DOCTYPE html>
@@ -10,11 +13,10 @@
 </header>
 <body>
     
-
      <main>
         {% block content %}{% endblock %}
      </main>
-     <!-- Nav bar -->
+     <!-- Navigation link to Admin access -->
      <br>
      <nav>
                 <a href="/admin">
@@ -22,7 +24,7 @@
                 </a>
      </nav>
      <br>
-    <!-- Footer -->
+    <!-- Footer showing copyright and author. -->
      <Footer>
         <div>
             copyright © 2024
