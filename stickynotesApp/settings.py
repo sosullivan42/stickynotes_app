@@ -1,3 +1,5 @@
+# stickynotesApp/settings.py
+
 """
 Django settings for stickynotes project.
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # New stickynotes application
     'stickynotes',
 ]
 
@@ -125,7 +128,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = BASE_DIR / "static"
-
 
 
 # Default primary key field type
